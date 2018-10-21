@@ -32,7 +32,7 @@ rm screenfetch-dev
 wget https://raw.githubusercontent.com/ffontinele35/Script_SSH_OpenVPNmaster/.bashrc
 wget https://raw.githubusercontent.com/ffontinele35/Script_SSH_OpenVPN/master/screenfetch-dev
 clear
-pip install speedtest-cli;
+apt install speedtest-cli -y;
 apt-get install nethogs -y;
 apt-get install nload;
 apt-get install wget;
