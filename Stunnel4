@@ -1,6 +1,5 @@
 #!/bin/bash
 # Script SSL Tunnel
-# Criado por: @lostvpnoficial
 # editado por @Fontinele
 
 instalador(){
@@ -11,17 +10,17 @@ instalador(){
         echo -e "Agora vamos escolher a porta que sera usada para redirecionar a conexao para a porta SSL.\n"
 	read -p "Enter para continuar!"
 	echo ""
-	echo -e "Exemplo: a porta 22 do SSH\n"
-	read -p "Escolha una porta para redirecionar a conexÃ£o SSL? " port_redir
+	echo -e "Escolha a porta 22 do SSH\n"
+	read -p "Escolha uma porta para redirecionar a conexÃ£o SSL? " port_redir
 	echo -e "\nExemplo: porta 80 ou 443"
 	echo -e "OBS: Se a porta estiver sendo usada por outro servico remova para nao causar conflito!\n"
 	read -p "Qual porta vai rodar o SSL? " port_ssl
-	printf "cert = /etc/stunnel/stunnel.pem
-	client = no
+	printf "client = no
 	socket = a:SO_REUSEADDR=1
 	socket = l:TCP_NODELAY=1
 	socket = r:TCP_NODELAY=1
 	[ssh]
+	cert = /etc/stunnel/stunnel.pem
 	connect = 127.0.0.1:$port_redir
 	accept = $port_ssl" > stunnel.conf
 	openssl genrsa -out key.pem 2048
