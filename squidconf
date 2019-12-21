@@ -25,8 +25,8 @@ http_access allow oi
 http_access allow netflix
 http_access allow videoprime
 
-http_port 443
-http_port 80
+http_port 3128
+http_port 8799
 
 visible_hostname SSH-OPENVPN
 
@@ -60,8 +60,8 @@ http_access allow oi
 http_access allow netflix
 http_access allow videoprime
 
-http_port 443
-http_port 80
+http_port 3128
+http_port 8799
 
 visible_hostname SSH-OPENVPN
 
